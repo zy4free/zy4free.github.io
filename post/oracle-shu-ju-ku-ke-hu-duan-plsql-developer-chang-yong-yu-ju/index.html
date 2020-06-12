@@ -1,22 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zy4free.github.io</id>
-    <title>白发个人博客</title>
-    <updated>2020-06-12T15:13:00.719Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://zy4free.github.io"/>
-    <link rel="self" href="https://zy4free.github.io/atom.xml"/>
-    <subtitle>一花一世界 一叶一菩提</subtitle>
-    <logo>https://zy4free.github.io/images/avatar.png</logo>
-    <icon>https://zy4free.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 白发个人博客</rights>
-    <entry>
-        <title type="html"><![CDATA[Oracle数据库客户端PLSQL Developer常用语句]]></title>
-        <id>https://zy4free.github.io/post/oracle-shu-ju-ku-ke-hu-duan-plsql-developer-chang-yong-yu-ju/</id>
-        <link href="https://zy4free.github.io/post/oracle-shu-ju-ku-ke-hu-duan-plsql-developer-chang-yong-yu-ju/">
-        </link>
-        <updated>2020-06-12T06:52:57.000Z</updated>
-        <content type="html"><![CDATA[<p>在SQLPLUS下，实现中-英字符集转换<br>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Oracle数据库客户端PLSQL Developer常用语句 | 白发个人博客</title>
+<meta name="description" content="一花一世界 一叶一菩提">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zy4free.github.io/favicon.ico?v=1591974748495">
+<link rel="stylesheet" href="https://zy4free.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://zy4free.github.io">
+        <img class="avatar" src="https://zy4free.github.io/images/avatar.png?v=1591974748495" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://zy4free.github.io">
+        <h1 class="site-title">白发个人博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            WEB前端开发
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            SIEBEL开发
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            RAP
+          </a>
+        
+      
+        
+          <a href="/" class="menu purple-link">
+            BLOG留言
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://zy4free.github.io/post-images/oracle-shu-ju-ku-ke-hu-duan-plsql-developer-chang-yong-yu-ju.jpg')">
+            </div>
+          
+          <h2 class="post-title">Oracle数据库客户端PLSQL Developer常用语句</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-06-12</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://zy4free.github.io/tag/f0xi7tfH4/">
+                    Oracle
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://zy4free.github.io/tag/h6-joDDYSn/">
+                    PLSQL
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>在SQLPLUS下，实现中-英字符集转换<br>
 alter session set nls_language='AMERICAN';<br>
 alter session set nls_language='SIMPLIFIED CHINESE';<br>
 主要知识点：<br>
@@ -197,6 +298,99 @@ commit;<br>
 select * from temp_dept; --无数据显示,数据自动清除<br>
 on commit preserve rows:在会话期间表一直可以存在（保留数据）<br>
 on commit delete rows:事务结束清除数据（在事务结束时自动删除表的数据）</p>
-]]></content>
-    </entry>
-</feed>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">一花一世界 一叶一菩提</div>
+  <div class="social-container">
+    
+      
+        <a href="/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+        <a href="/" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+    
+      
+        <a href="/" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+        <a href="/" target="_blank">
+          <i class="fab fa-zhihu"></i>
+        </a>
+      
+    
+      
+        <a href="/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'dc88cbc8821164664048',
+        clientSecret: '555c3f064c2bb93070f68fc3bba30f6289a5be9b',
+        repo: 'zy4free.github.io',
+        owner: 'zy4free',
+        admin: ['zy4free'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
