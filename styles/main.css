@@ -1643,3 +1643,8 @@ td {
 .katex .mtable .col-align-r > .vlist {
   text-align: right;
 }
+
+      .main {
+        max-width: 10000px;
+      }
+    
