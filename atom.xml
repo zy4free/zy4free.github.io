@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zy4free.github.io</id>
     <title>白发个人博客</title>
-    <updated>2020-06-12T04:02:51.595Z</updated>
+    <updated>2020-06-12T05:32:19.496Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zy4free.github.io"/>
     <link rel="self" href="https://zy4free.github.io/atom.xml"/>
@@ -10,13 +10,4 @@
     <logo>https://zy4free.github.io/images/avatar.png</logo>
     <icon>https://zy4free.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 白发个人博客</rights>
-    <entry>
-        <title type="html"><![CDATA[啵啵啵波！]]></title>
-        <id>https://zy4free.github.io/post/bo-bo-bo-bo/</id>
-        <link href="https://zy4free.github.io/post/bo-bo-bo-bo/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>爱你！</p>
-]]></content>
-    </entry>
 </feed>
