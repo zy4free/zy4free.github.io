@@ -1,123 +1,158 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    
-<meta charset="utf-8" >
-
+<head>
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
 <title>Oracle数据库客户端PLSQL Developer常用语句 | 白发个人博客</title>
-<meta name="description" content="一花一世界 一叶一菩提">
+<link rel="shortcut icon" href="https://zy4free.github.io/favicon.ico?v=1592017793863">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://zy4free.github.io/styles/main.css" type='text/css' media='all'>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zy4free.github.io/favicon.ico?v=1591975791936">
-<link rel="stylesheet" href="https://zy4free.github.io/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 
 
 
-  </head>
-  <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://zy4free.github.io">
-        <img class="avatar" src="https://zy4free.github.io/images/avatar.png?v=1591975791936" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://zy4free.github.io">
-        <h1 class="site-title">白发个人博客</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            WEB前端开发
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            SIEBEL开发
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            RAP
-          </a>
-        
-      
-        
-          <a href="/" class="menu purple-link">
-            BLOG留言
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://zy4free.github.io/post-images/oracle-shu-ju-ku-ke-hu-duan-plsql-developer-chang-yong-yu-ju.jpg')">
+</head>
+<body class="home blog ct-body standard">
+<div id="overflow-container" class="overflow-container">
+  <a class="skip-content" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://zy4free.github.io/tag/f0xi7tfH4/">Oracle</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://zy4free.github.io/tag/h6-joDDYSn/">PLSQL</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
             </div>
-          
-          <h2 class="post-title">Oracle数据库客户端PLSQL Developer常用语句</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-06-12</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
+            <ul class="social-media-icons">
                 
-                  <a href="https://zy4free.github.io/tag/f0xi7tfH4/">
-                    Oracle
                     
-                      ，
-                    
-                  </a>
                 
-                  <a href="https://zy4free.github.io/tag/h6-joDDYSn/">
-                    PLSQL
                     
-                  </a>
                 
-              </span>
-            
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://zy4free.github.io">  白发个人博客 </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">一花一世界 一叶一菩提</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">首页</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">WEB前端开发</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">SIEBEL开发</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">RAP</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">BLOG留言</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+          <div class='featured-image lazy lazy-bg-image' data-background="https://zy4free.github.io/post-images/oracle-shu-ju-ku-ke-hu-duan-plsql-developer-chang-yong-yu-ju.jpg">
           </div>
-          <div class="post-content">
-            <p>在SQLPLUS下，实现中-英字符集转换<br>
+        
+
+        <div class="entry-meta">
+          <span class="date">· 2020-06-12 ·</span> <span> / </span>
+          <span class="author">
+            <a href="https://zy4free.github.io" title="" rel="author"> Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></a>
+          </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://zy4free.github.io/tag/f0xi7tfH4/">Oracle</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://zy4free.github.io/tag/h6-joDDYSn/">PLSQL</a>
+                </span>
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>Oracle数据库客户端PLSQL Developer常用语句</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>在SQLPLUS下，实现中-英字符集转换<br>
 alter session set nls_language='AMERICAN';<br>
 alter session set nls_language='SIMPLIFIED CHINESE';<br>
 主要知识点：<br>
@@ -299,98 +334,131 @@ select * from temp_dept; --无数据显示,数据自动清除<br>
 on commit preserve rows:在会话期间表一直可以存在（保留数据）<br>
 on commit delete rows:事务结束清除数据（在事务结束时自动删除表的数据）</p>
 
+            </article>
+          </div>
+          <div class='entry-meta-bottom'>
+            <div class="entry-categories">
+              <p>
+                <span>Categories</span>
+                
+                  
+                    
+                  <a href="https://zy4free.github.io/tag/f0xi7tfH4/" title="View all posts in Oracle">Oracle</a>
+                    
+                    
+                    
+                  <a href="https://zy4free.github.io/tag/h6-joDDYSn/" title="View all posts in PLSQL">PLSQL</a>
+                    
+                    
+              </p>
+            </div>
+            <div class="entry-tags">
+              <p><span>Tags</span>
+              </p>
+            </div>
+          </div>
+          <div class="author-meta">
+            <div class="author">
+              <img alt='' src="https://zy4free.github.io/images/avatar.png?v=1592017793863" class='avatar avatar-72 photo' height='72' width='72'>
+              <span>WRITTEN BY: &nbsp;&nbsp;&nbsp;<a href='https://zy4free.github.io'></a> </span>
+            </div>
+            <div class="bio">
+              <p></p>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
           </div>
         </div>
-
-        
+          
       </div>
-
-      
+      <section id="comments" class="comments">
         
-          <div id="gitalk-container"></div>
-        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        
-      
+<div id="gitalk-container"></div>
 
-      <div class="site-footer">
-  <div class="slogan">一花一世界 一叶一菩提</div>
-  <div class="social-container">
-    
-      
-        <a href="/" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="/" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="/" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-        <a href="/" target="_blank">
-          <i class="fab fa-zhihu"></i>
-        </a>
-      
-    
-      
-        <a href="/" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</div>
+<script>
 
+  var gitalk = new Gitalk({
+    clientID: 'dc88cbc8821164664048',
+    clientSecret: '555c3f064c2bb93070f68fc3bba30f6289a5be9b',
+    repo: 'zy4free.github.io',
+    owner: 'zy4free',
+    admin: ['zy4free'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
 
-  
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
+          
+        
+      </section>
+    </div>
+  </div>
+  <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://zy4free.github.io"> 白发个人博客 </a>
+    </h1>
+    <p class="site-description">一花一世界 一叶一菩提</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://zy4free.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://zy4free.github.io/media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://zy4free.github.io/media/scripts/lib/production.min.js"></script>
 
-      var gitalk = new Gitalk({
-        clientID: 'dc88cbc8821164664048',
-        clientSecret: '555c3f064c2bb93070f68fc3bba30f6289a5be9b',
-        repo: 'zy4free.github.io',
-        owner: 'zy4free',
-        admin: ['zy4free'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
-
-
-
-
-  </body>
+</div>
+</body>
 </html>
+
